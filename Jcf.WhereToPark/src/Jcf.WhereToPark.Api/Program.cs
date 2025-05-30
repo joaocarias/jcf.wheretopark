@@ -5,9 +5,8 @@ var builder = WebApplication.CreateBuilder(args);
 Console.WriteLine(builder.Configuration.GetSection("EnvironmentName").Value);
 
 // Add services to the container.
-
+builder.Services.AddDatabaseConfiguration(builder.Configuration, builder.Environment);
 builder.Services.AddControllers();
-
 builder.Services.AddCustomOpenApi();
 
 var app = builder.Build();
