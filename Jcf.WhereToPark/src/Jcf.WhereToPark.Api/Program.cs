@@ -10,6 +10,7 @@ builder.Services.AddDatabaseConfiguration(builder.Configuration, builder.Environ
 builder.Services.AddAuthenticationConfiguration(builder.Configuration);
 builder.Services.AddControllers();
 builder.Services.AddCustomOpenApi();
+builder.Services.AddCustomServices();
 
 var app = builder.Build();
 
@@ -27,6 +28,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
