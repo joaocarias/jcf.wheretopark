@@ -1,6 +1,0 @@
-@Jcf.WhereToPark.User_HostAddress = http://localhost:5002
-
-GET {{Jcf.WhereToPark.User_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

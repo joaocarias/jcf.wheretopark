@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Jcf.WhereToPark.User.Controllers
+namespace Jcf.WhereToPark.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]

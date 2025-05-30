@@ -1,4 +1,4 @@
-namespace Jcf.WhereToPark.User
+namespace Jcf.WhereToPark.Api
 {
     public class WeatherForecast
     {
