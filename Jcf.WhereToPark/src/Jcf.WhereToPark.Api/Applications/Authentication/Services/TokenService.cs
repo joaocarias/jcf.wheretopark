@@ -5,7 +5,7 @@ using Jcf.WhereToPark.Api.Core.Constants;
 using Jcf.WhereToPark.Api.Core.Services.IServices;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Jcf.WhereToPark.Api.Application.Authentication.Services
+namespace Jcf.WhereToPark.Api.Applications.Authentication.Services
 {
     public class TokenService : ITokenService
     {

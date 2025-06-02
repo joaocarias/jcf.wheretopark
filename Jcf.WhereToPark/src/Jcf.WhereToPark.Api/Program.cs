@@ -1,5 +1,5 @@
-using Jcf.WhereToPark.Api.Application.Authentication.Extensions;
-using Jcf.WhereToPark.Api.Extensions;
+using Jcf.WhereToPark.Api.Applications.Authentication.Extensions;
+using Jcf.WhereToPark.Api.Core.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 

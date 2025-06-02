@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Jcf.WhereToPark.Api.Applications.User.Models.DTOs;
 using Jcf.WhereToPark.Api.Core.Constants;
 using Jcf.WhereToPark.Api.Core.Entities;
 
-namespace Jcf.WhereToPark.Api.Application.User.Entities
+namespace Jcf.WhereToPark.Api.Applications.User.Entities
 {
     public class User : EntityBase
     {
@@ -59,6 +60,24 @@ namespace Jcf.WhereToPark.Api.Application.User.Entities
             Email = string.Empty;
             Password = string.Empty;
             Login = string.Empty;
+        }
+
+        public UserDTO ToDTO() 
+        {
+            return new UserDTO(
+                Name, 
+                Email, 
+                Login, 
+                Role,
+                Id, 
+                IsActive,
+                CreateAt, 
+                UserCreate != null ? new UserDTO(UserCreate.Id, UserCreate.Name, UserCreate.Email, UserCreate.Login, UserCreate.Role, UserCreateId ) : null, 
+                UserCreateId, 
+                UpdateAt,
+                null, 
+                UserUpdateId
+            );            
         }
     }
 }

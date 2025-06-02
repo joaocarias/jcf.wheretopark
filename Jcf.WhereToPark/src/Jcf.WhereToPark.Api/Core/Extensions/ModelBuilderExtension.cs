@@ -1,9 +1,9 @@
-﻿using Jcf.WhereToPark.Api.Application.User.Entities;
+﻿using Jcf.WhereToPark.Api.Applications.User.Entities;
 using Jcf.WhereToPark.Api.Core.Constants;
 using Jcf.WhereToPark.Api.Core.Uties;
 using Microsoft.EntityFrameworkCore;
 
-namespace Jcf.WhereToPark.Api.Extensions
+namespace Jcf.WhereToPark.Api.Core.Extensions
 {
     public static class ModelBuilderExtension
     {

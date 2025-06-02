@@ -1,7 +1,7 @@
 ﻿using Jcf.WhereToPark.Api.Data.Contexts;
 using Microsoft.EntityFrameworkCore;
 
-namespace Jcf.WhereToPark.Api.Extensions
+namespace Jcf.WhereToPark.Api.Core.Extensions
 {
     public static class DatabaseExtension
     {

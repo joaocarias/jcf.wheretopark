@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Jcf.WhereToPark.Api.Application.Authentication.Extensions
+namespace Jcf.WhereToPark.Api.Applications.Authentication.Extensions
 {
     public static class AuthenticationExtension
     {

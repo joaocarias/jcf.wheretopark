@@ -1,7 +1,7 @@
-﻿using Jcf.WhereToPark.Api.Application.Authentication.Services;
+﻿using Jcf.WhereToPark.Api.Applications.Authentication.Services;
 using Jcf.WhereToPark.Api.Core.Services.IServices;
 
-namespace Jcf.WhereToPark.Api.Extensions
+namespace Jcf.WhereToPark.Api.Core.Extensions
 {
     public static class ServiceExtension
     {

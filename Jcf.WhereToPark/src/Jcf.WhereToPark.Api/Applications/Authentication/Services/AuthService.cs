@@ -2,7 +2,7 @@
 using Jcf.WhereToPark.Api.Data.Contexts;
 using Microsoft.EntityFrameworkCore;
 
-namespace Jcf.WhereToPark.Api.Application.Authentication.Services
+namespace Jcf.WhereToPark.Api.Applications.Authentication.Services
 {
     public class AuthService : IAuthService
     {

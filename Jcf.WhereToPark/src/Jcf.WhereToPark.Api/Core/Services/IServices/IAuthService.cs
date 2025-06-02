@@ -1,4 +1,4 @@
-﻿using Jcf.WhereToPark.Api.Application.User.Entities;
+﻿using Jcf.WhereToPark.Api.Applications.User.Entities;
 
 namespace Jcf.WhereToPark.Api.Core.Services.IServices
 {

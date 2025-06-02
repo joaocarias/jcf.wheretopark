@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.OpenApi;
 using Microsoft.OpenApi.Models;
 
-namespace Jcf.WhereToPark.Api.Extensions
+namespace Jcf.WhereToPark.Api.Core.Extensions
 {
     public static class OpenApiExtension
     {

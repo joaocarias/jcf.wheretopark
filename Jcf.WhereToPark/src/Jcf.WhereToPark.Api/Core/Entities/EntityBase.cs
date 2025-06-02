@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Jcf.WhereToPark.Api.Application.User.Entities;
+using Jcf.WhereToPark.Api.Applications.User.Entities;
 
 namespace Jcf.WhereToPark.Api.Core.Entities
 {
