@@ -14,4 +14,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="8.1.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Applications\Authentication\Controllers\NovaPasta1\" />
+    <Folder Include="Applications\Authentication\Controllers\NovaPasta\" />
+  </ItemGroup>
+
 </Project>
