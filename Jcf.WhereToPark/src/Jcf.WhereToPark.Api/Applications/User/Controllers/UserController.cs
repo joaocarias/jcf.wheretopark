@@ -1,4 +1,5 @@
-﻿using Jcf.WhereToPark.Api.Core.Controllers;
+﻿using Jcf.WhereToPark.Api.Applications.User.Services.IServices;
+using Jcf.WhereToPark.Api.Core.Controllers;
 using Jcf.WhereToPark.Api.Core.Models.Responses;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,10 +10,12 @@ namespace Jcf.WhereToPark.Api.Applications.User.Controllers
     public class UserController : AppControllerBase
     {
         private readonly ILogger<UserController> _logger;
+        private readonly IUserService _userService;
 
-        public UserController(ILogger<UserController> logger)
+        public UserController(ILogger<UserController> logger, IUserService userService)
         {
             _logger = logger;
+            _userService = userService;
         }
 
         [HttpGet("{id}")]
@@ -39,7 +42,29 @@ namespace Jcf.WhereToPark.Api.Applications.User.Controllers
             }
         }
 
-        // get
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            var response = new APIResponse();
+            try
+            {
+                var users = await _userService.GetAllAsync();
+                if (users is null)
+                {
+                    response.IsNotFound();
+                    return NotFound(response);
+                }
+
+                response.IsOk(users.Select(x => x.ToDTO()));
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"[{nameof(UserController)} - {nameof(Get)}] | {ex.Message}");
+                response.IsBadRequest(ex.Message);
+                return BadRequest(response);
+            }
+        }
 
         // post
 

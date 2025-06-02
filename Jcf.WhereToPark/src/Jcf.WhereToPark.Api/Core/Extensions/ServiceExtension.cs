@@ -1,4 +1,6 @@
 ﻿using Jcf.WhereToPark.Api.Applications.Authentication.Services;
+using Jcf.WhereToPark.Api.Applications.User.Services;
+using Jcf.WhereToPark.Api.Applications.User.Services.IServices;
 using Jcf.WhereToPark.Api.Core.Services.IServices;
 
 namespace Jcf.WhereToPark.Api.Core.Extensions
@@ -9,6 +11,7 @@ namespace Jcf.WhereToPark.Api.Core.Extensions
         {
             services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<IUserService, UserService>();
           
             return services;
         }

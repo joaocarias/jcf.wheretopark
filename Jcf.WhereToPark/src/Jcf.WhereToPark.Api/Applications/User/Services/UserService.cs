@@ -22,8 +22,21 @@ namespace Jcf.WhereToPark.Api.Applications.User.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError($"[{nameof(UserService)} - {nameof(GetAsync)}] | {ex.Message}");
+                _logger.LogError($"[{nameof(UserService)} - {nameof(CreateAsync)}] | {ex.Message}");
                 return null;
+            }
+        }
+
+        public async Task<IEnumerable<Entities.User>?> GetAllAsync()
+        {
+            try
+            {
+                return await _userRepository.GetAllAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"[{nameof(UserService)} - {nameof(GetAllAsync)}] | {ex.Message}");
+                return Enumerable.Empty<Entities.User>();
             }
         }
 
